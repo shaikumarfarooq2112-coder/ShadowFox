@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            📚 Book Store
+        </div>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Our Online Book Store</h2>
+
+        <p>
+            Discover the best programming books for learning Python,
+            Java, React, HTML, CSS, Node.js, Express.js and MongoDB.
+        </p>
+
+        <a href="#products">
+            <button>Shop Now</button>
+        </a>
+    </section>
+
+    <h1>Welcome to Online Book Store</h1>
+
+    <center>
+        <button onclick="window.location.href='cart.html'">
+            View Cart
+        </button>
+    </center>
+
+    <div class="container" id="products">
+
+        <!-- Book 1 -->
+        <div class="card">
+            <img src="images/python.jpg" alt="Python Book">
+
+            <h2>
+                <a href="product.html">Python Book</a>
+            </h2>
+
+            <p>Price: ₹500</p>
+
+            <button onclick="addToCart('Python Book',500)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="card">
+            <img src="images/java.jpg" alt="Java Book">
+
+            <h2>Java Book</h2>
+
+            <p>Price: ₹400</p>
+
+            <button onclick="addToCart('Java Book',400)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="card">
+            <img src="images/react.jpg" alt="React Book">
+
+            <h2>React Book</h2>
+
+            <p>Price: ₹600</p>
+
+            <button onclick="addToCart('React Book',600)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="card">
+            <img src="images/javascript.jpg" alt="JavaScript Book">
+
+            <h2>JavaScript Book</h2>
+
+            <p>Price: ₹550</p>
+
+            <button onclick="addToCart('JavaScript Book',550)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="card">
+            <img src="images/html.png" alt="HTML CSS Book">
+
+            <h2>HTML & CSS Book</h2>
+
+            <p>Price: ₹350</p>
+
+            <button onclick="addToCart('HTML & CSS Book',350)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="card">
+            <img src="images/node.png" alt="Node.js Book">
+
+            <h2>Node.js Book</h2>
+
+            <p>Price: ₹650</p>
+
+            <button onclick="addToCart('Node.js Book',650)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 7 -->
+        <div class="card">
+            <img src="images/express.webp" alt="Express.js Book">
+
+            <h2>Express.js Book</h2>
+
+            <p>Price: ₹700</p>
+
+            <button onclick="addToCart('Express.js Book',700)">
+                Add To Cart
+            </button>
+        </div>
+
+        <!-- Book 8 -->
+        <div class="card">
+            <img src="images/mongodb.png" alt="MongoDB Book">
+
+            <h2>MongoDB Book</h2>
+
+            <p>Price: ₹750</p>
+
+            <button onclick="addToCart('MongoDB Book',750)">
+                Add To Cart
+            </button>
+        </div>
+
+    </div>
+
+    <footer>
+    <p>© 2026 Online Book Store</p>
+    <p>Developed by Shaik Shaheena</p>
+    <p>CodeAlpha Internship Project</p>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
