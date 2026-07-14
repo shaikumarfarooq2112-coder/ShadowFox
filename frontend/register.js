@@ -1,30 +1,38 @@
-const form = document.getElementById("registerForm");
+function register(){
 
-form.addEventListener("submit", function(event) {
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
 
-    event.preventDefault();
 
-    const user = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
-    };
+fetch("http://localhost:3000/register",
+{
+method:"POST",
 
-    fetch("http://localhost:3000/register", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
+headers:{
+"Content-Type":"application/json"
+},
 
-        form.reset();
-    })
-    .catch(error => {
-        console.log(error);
-    });
+body:JSON.stringify({
+
+name:name,
+email:email,
+password:password
+
+})
+
+})
+
+
+.then(res=>res.json())
+
+.then(data=>{
+
+alert(data.message);
+
+window.location.href="login.html";
 
 });
+
+
+}

@@ -1,79 +1,142 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart =
+JSON.parse(localStorage.getItem("cart"))
+|| [];
 
-let cartItems = document.getElementById("cartItems");
+
+
+function displayCart(){
+
+
+let container =
+document.getElementById("cartItems");
+
 
 let total = 0;
 
-function displayCart() {
 
-    cartItems.innerHTML = "";
+container.innerHTML="";
 
-    total = 0;
 
-    cart.forEach(function(item, index) {
 
-        let product = document.createElement("p");
+if(cart.length===0){
 
-        product.innerHTML =
-        item.name +
-        " - ₹" +
-        item.price +
-        ' <button onclick="removeItem(' + index + ')">Remove</button>';
+container.innerHTML=
+"<h2>Your cart is empty</h2>";
 
-        cartItems.appendChild(product);
-
-        total += item.price;
-
-    });
-
-    document.getElementById("totalPrice").textContent =
-    "Total: ₹" + total;
+return;
 
 }
 
-function removeItem(index) {
 
-    cart.splice(index, 1);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+cart.forEach((item,index)=>{
 
-    displayCart();
+
+total += item.price;
+
+
+
+container.innerHTML += `
+
+
+<div class="cart-card">
+
+
+<h2>
+${item.name}
+</h2>
+
+
+<p>
+Price: ₹${item.price}
+</p>
+
+
+<button onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+
+document.getElementById(
+"totalPrice"
+).innerText=total;
+
 
 }
+
+
+
+
+function removeItem(index){
+
+
+cart.splice(index,1);
+
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
 
 displayCart();
 
-    function placeOrder() {
-
-    fetch("http://localhost:3000/orders", {
-
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify(cart)
-
-    })
-
-    .then(response => response.json())
-
-    .then(data => {
-
-        alert(data.message);
-
-        localStorage.removeItem("cart");
-
-        window.location.reload();
-
-    })
-
-    .catch(error => {
-
-        console.log(error);
-
-    });
 
 }
 
+
+
+
+function checkout(){
+
+
+fetch("http://localhost:3000/orders",
+{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify(cart)
+
+})
+
+
+.then(res=>res.json())
+
+.then(data=>{
+
+
+alert(data.message);
+
+
+localStorage.removeItem("cart");
+
+
+window.location.href="index.html";
+
+
+});
+
+
+}
+
+
+
+displayCart();

@@ -10,24 +10,23 @@ app.use(bodyParser.json());
 const PORT = 3000;
 
 const products = [
-    { id: 1, name: "Python Book", price: 500 },
-    { id: 2, name: "Java Book", price: 400 },
-    { id: 3, name: "React Book", price: 600 },
-    { id: 4, name: "JavaScript Book", price: 550 },
-    { id: 5, name: "HTML & CSS Book", price: 350 },
-    { id: 6, name: "Node.js Book", price: 650 },
-    { id: 7, name: "Express.js Book", price: 700 },
-    { id: 8, name: "MongoDB Book", price: 750 }
-
+    { id: 1, name: "Wireless Headphones", price: 1999 },
+    { id: 2, name: "Smart Watch", price: 2499 },
+    { id: 3, name: "Gaming Mouse", price: 999 },
+    { id: 4, name: "Bluetooth Speaker", price: 1799 },
+    { id: 5, name: "Mechanical Keyboard", price: 2999 },
+    { id: 6, name: "Laptop", price: 54999 },
+    { id: 7, name: "Smartphone", price: 18999 },
+    { id: 8, name: "Camera", price: 32999 }
 ];
 
 let users = [];
 let orders = [];
+let productsList = products;
 
 app.get("/", (req, res) => {
-    res.send("Welcome to CodeAlpha Book Store!");
+    res.send("Welcome to ShopSphere!");
 });
-
 app.get("/products", (req, res) => {
     res.json(products);
 });

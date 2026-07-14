@@ -1,31 +1,51 @@
-const form = document.getElementById("loginForm");
+function login(){
 
-form.addEventListener("submit", function(event) {
 
-    event.preventDefault();
+let email=document.getElementById("email").value;
 
-    const user = {
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
-    };
+let password=document.getElementById("password").value;
 
-    fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
 
-        if (data.message === "Login Successful!") {
-            window.location.href = "index.html";
-        }
-    })
-    .catch(error => {
-        console.log(error);
-    });
+
+fetch("http://localhost:3000/login",
+{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+email:email,
+
+password:password
+
+})
+
+})
+
+
+.then(res=>res.json())
+
+
+.then(data=>{
+
+
+alert(data.message);
+
+
+if(data.message=="Login Successful!"){
+
+window.location.href="index.html";
+
+}
+
 
 });
+
+
+}

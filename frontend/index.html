@@ -1,166 +1,772 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Online Book Store</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShopSphere | Online Shopping</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            📚 Book Store
-        </div>
 
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-            <a href="cart.html">Cart</a>
-        </div>
-    </nav>
+<!-- ================= NAVBAR ================= -->
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to Our Online Book Store</h2>
+<nav class="navbar">
 
-        <p>
-            Discover the best programming books for learning Python,
-            Java, React, HTML, CSS, Node.js, Express.js and MongoDB.
-        </p>
 
-        <a href="#products">
-            <button>Shop Now</button>
-        </a>
-    </section>
+<div class="logo">
+🛍️ ShopSphere
+</div>
 
-    <h1>Welcome to Online Book Store</h1>
 
-    <center>
-        <button onclick="window.location.href='cart.html'">
-            View Cart
-        </button>
-    </center>
 
-    <div class="container" id="products">
+<div class="search-bar">
 
-        <!-- Book 1 -->
-        <div class="card">
-            <img src="images/python.jpg" alt="Python Book">
+<input 
+type="text"
+id="searchInput"
+placeholder="Search products..."
+onkeyup="searchProducts()">
 
-            <h2>
-                <a href="product.html">Python Book</a>
-            </h2>
+</div>
 
-            <p>Price: ₹500</p>
 
-            <button onclick="addToCart('Python Book',500)">
-                Add To Cart
-            </button>
-        </div>
 
-        <!-- Book 2 -->
-        <div class="card">
-            <img src="images/java.jpg" alt="Java Book">
+<div class="menu">
 
-            <h2>Java Book</h2>
+<a href="index.html">Home</a>
 
-            <p>Price: ₹400</p>
+<a href="#products">Products</a>
 
-            <button onclick="addToCart('Java Book',400)">
-                Add To Cart
-            </button>
-        </div>
+<a href="#categories">Categories</a>
 
-        <!-- Book 3 -->
-        <div class="card">
-            <img src="images/react.jpg" alt="React Book">
+<a href="register.html">Register</a>
 
-            <h2>React Book</h2>
+<a href="login.html">Login</a>
 
-            <p>Price: ₹600</p>
+<a href="cart.html">
+🛒 Cart
+</a>
 
-            <button onclick="addToCart('React Book',600)">
-                Add To Cart
-            </button>
-        </div>
 
-        <!-- Book 4 -->
-        <div class="card">
-            <img src="images/javascript.jpg" alt="JavaScript Book">
+</div>
 
-            <h2>JavaScript Book</h2>
 
-            <p>Price: ₹550</p>
+</nav>
 
-            <button onclick="addToCart('JavaScript Book',550)">
-                Add To Cart
-            </button>
-        </div>
 
-        <!-- Book 5 -->
-        <div class="card">
-            <img src="images/html.png" alt="HTML CSS Book">
 
-            <h2>HTML & CSS Book</h2>
 
-            <p>Price: ₹350</p>
 
-            <button onclick="addToCart('HTML & CSS Book',350)">
-                Add To Cart
-            </button>
-        </div>
+<!-- ================= HERO ================= -->
 
-        <!-- Book 6 -->
-        <div class="card">
-            <img src="images/node.png" alt="Node.js Book">
 
-            <h2>Node.js Book</h2>
+<section class="hero">
 
-            <p>Price: ₹650</p>
 
-            <button onclick="addToCart('Node.js Book',650)">
-                Add To Cart
-            </button>
-        </div>
+<div class="hero-content">
 
-        <!-- Book 7 -->
-        <div class="card">
-            <img src="images/express.webp" alt="Express.js Book">
 
-            <h2>Express.js Book</h2>
+<h1>
+🔥 Mega Sale is Live!
+</h1>
 
-            <p>Price: ₹700</p>
 
-            <button onclick="addToCart('Express.js Book',700)">
-                Add To Cart
-            </button>
-        </div>
+<h2>
+Up To 50% OFF
+</h2>
 
-        <!-- Book 8 -->
-        <div class="card">
-            <img src="images/mongodb.png" alt="MongoDB Book">
 
-            <h2>MongoDB Book</h2>
+<p>
+Latest Electronics, Smartphones, Laptops & Accessories
+</p>
 
-            <p>Price: ₹750</p>
 
-            <button onclick="addToCart('MongoDB Book',750)">
-                Add To Cart
-            </button>
-        </div>
+<button onclick="location.href='#products'">
+Shop Now
+</button>
 
-    </div>
 
-    <footer>
-    <p>© 2026 Online Book Store</p>
-    <p>Developed by Shaik Shaheena</p>
-    <p>CodeAlpha Internship Project</p>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+
+<section class="categories" id="categories">
+
+
+<h2>
+Shop By Category
+</h2>
+
+
+
+<div class="category-container">
+
+
+
+<div class="category-card">
+
+💻
+
+<h3>
+Electronics
+</h3>
+
+</div>
+
+
+
+<div class="category-card">
+
+📱
+
+<h3>
+Mobiles
+</h3>
+
+</div>
+
+
+
+
+<div class="category-card">
+
+⌚
+
+<h3>
+Accessories
+</h3>
+
+</div>
+
+
+
+
+<div class="category-card">
+
+🎧
+
+<h3>
+Audio
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= FILTER ================= -->
+
+
+<section class="category-filter">
+
+
+<h2>
+Explore Products
+</h2>
+
+
+<div class="filter-buttons">
+
+
+<button onclick="filterProducts('All')">
+All
+</button>
+
+
+<button onclick="filterProducts('Electronics')">
+Electronics
+</button>
+
+
+<button onclick="filterProducts('Mobiles')">
+Mobiles
+</button>
+
+
+<button onclick="filterProducts('Audio')">
+Audio
+</button>
+
+
+<button onclick="filterProducts('Accessories')">
+Accessories
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= FEATURED ================= -->
+
+
+<section class="section-title">
+
+
+<h2>
+⭐ Featured Products
+</h2>
+
+
+<p>
+Premium products at the best prices
+</p>
+
+
+
+<button class="cart-btn"
+onclick="window.location.href='cart.html'">
+
+🛒 View Cart
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+
+<div class="container" id="products">
+
+
+
+
+
+<!-- PRODUCT 1 -->
+
+
+<div class="card product-card" data-category="Audio">
+
+
+<span class="discount">
+30% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+
+<img src="images/Wireless Headphones.jpg">
+
+
+<h2>
+<a href="product.html?id=1">
+Wireless Headphones
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹2999
+</p>
+
+
+<p>
+₹1999
+</p>
+
+
+<button onclick="addToCart('Wireless Headphones',1999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT 2 -->
+
+
+<div class="card product-card" data-category="Accessories">
+
+
+<span class="discount">
+25% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Smart Watch.jpg">
+
+
+<h2>
+<a href="product.html?id=2">
+Smart Watch
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹3499
+</p>
+
+
+<p>
+₹2499
+</p>
+
+
+<button onclick="addToCart('Smart Watch',2499)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT 3 -->
+
+
+<div class="card product-card" data-category="Accessories">
+
+
+<span class="discount">
+40% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Gaming Mouse.jpg">
+
+
+<h2>
+<a href="product.html?id=3">
+Gaming Mouse
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹1599
+</p>
+
+
+<p>
+₹999
+</p>
+
+
+<button onclick="addToCart('Gaming Mouse',999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT 4 -->
+
+
+<div class="card product-card" data-category="Audio">
+
+
+<span class="discount">
+20% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Bluetooth Speaker.jpg">
+
+
+<h2>
+<a href="product.html?id=4">
+Bluetooth Speaker
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹2299
+</p>
+
+
+<p>
+₹1799
+</p>
+
+
+<button onclick="addToCart('Bluetooth Speaker',1799)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT 5 -->
+
+
+<div class="card product-card" data-category="Electronics">
+
+
+<span class="discount">
+35% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Keyboard.jpg">
+
+
+<h2>
+<a href="product.html?id=5">
+Mechanical Keyboard
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹4999
+</p>
+
+
+<p>
+₹2999
+</p>
+
+
+<button onclick="addToCart('Mechanical Keyboard',2999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PRODUCT 6 -->
+
+
+<div class="card product-card" data-category="Electronics">
+
+
+<span class="discount">
+15% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Laptop.jpg">
+
+
+<h2>
+<a href="product.html?id=6">
+Laptop
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹64999
+</p>
+
+
+<p>
+₹54999
+</p>
+
+
+<button onclick="addToCart('Laptop',54999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUCT 7 -->
+
+
+<div class="card product-card" data-category="Mobiles">
+
+
+<span class="discount">
+25% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Smartphone.jpg">
+
+
+<h2>
+<a href="product.html?id=7">
+Smartphone
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹24999
+</p>
+
+
+<p>
+₹18999
+</p>
+
+
+<button onclick="addToCart('Smartphone',18999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PRODUCT 8 -->
+
+
+<div class="card product-card" data-category="Electronics">
+
+
+<span class="discount">
+20% OFF
+</span>
+
+
+<button class="wishlist">
+❤️
+</button>
+
+
+<img src="images/Camera.jpg">
+
+
+<h2>
+<a href="product.html?id=8">
+Camera
+</a>
+</h2>
+
+
+<div class="rating">
+⭐⭐⭐⭐
+</div>
+
+
+<p class="old-price">
+₹39999
+</p>
+
+
+<p>
+₹32999
+</p>
+
+
+<button onclick="addToCart('Camera',32999)">
+🛒 Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+
+
+<h3>
+🛍️ ShopSphere
+</h3>
+
+
+<p>
+Your One-Stop Online Shopping Destination
+</p>
+
+
+<p>
+© 2026 ShopSphere
+</p>
+
+
+<p>
+Developed by Shaik Shaheena
+</p>
+
+
 </footer>
 
-    <script src="script.js"></script>
+
+
+
+
+
+<script src="script.js"></script>
+
 
 </body>
 

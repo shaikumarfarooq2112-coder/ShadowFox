@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="style.css">
+
+<title>ShopSphere Cart</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<h1>Shopping Cart</h1>
 
-<div id="cartItems"></div>
+<nav class="navbar">
 
-<h2 id="totalPrice"></h2>
+<div class="logo">
+🛍️ ShopSphere
+</div>
 
-<button onclick="window.location.href='index.html'">
-    Continue Shopping
+
+<div class="menu">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="cart.html">
+Cart
+</a>
+
+</div>
+
+</nav>
+
+
+
+<h1 class="cart-title">
+🛒 Your Shopping Cart
+</h1>
+
+
+
+<div id="cartItems">
+
+</div>
+
+
+
+<div class="cart-total">
+
+<h2>
+Total: ₹<span id="totalPrice">0</span>
+</h2>
+
+
+<button onclick="checkout()">
+Checkout
 </button>
-<button onclick="placeOrder()">
-    Place Order
-</button>
+
+
+</div>
+
+
 
 <script src="cart.js"></script>
 
+
 </body>
+
 </html>
