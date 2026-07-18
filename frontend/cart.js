@@ -102,7 +102,7 @@ displayCart();
 function checkout(){
 
 
-fetch("http://localhost:3000/orders",
+fetch("https://shadowfox-production.up.railway.app/",
 {
 
 method:"POST",

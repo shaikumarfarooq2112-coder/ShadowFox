@@ -8,7 +8,7 @@ function register(event) {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    fetch("http://localhost:3000/register", {
+    fetch("https://shadowfox-production.up.railway.app/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

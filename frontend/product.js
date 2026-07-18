@@ -7,7 +7,7 @@ const id = params.get("id");
 
 
 
-fetch("http://localhost:3000/products")
+fetch("https://shadowfox-production.up.railway.app/")
 
 .then(response=>response.json())
 

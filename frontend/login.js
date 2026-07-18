@@ -7,7 +7,7 @@ function login(event) {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    fetch("http://localhost:3000/login", {
+    fetch("https://shadowfox-production.up.railway.app/", {
 
         method: "POST",
 
