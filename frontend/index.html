@@ -10,7 +10,6 @@
 <title>ShopSphere | Online Shopping</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
 
 </head>
 
@@ -18,24 +17,45 @@
 <body>
 
 
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+🚚 Free Shipping on Orders Above ₹999 |
+🎉 Flat 20% OFF for New Users |
+🔒 Secure Payments
+
+</div>
+
+
+
 <!-- ================= NAVBAR ================= -->
+
 
 <nav class="navbar">
 
 
 <div class="logo">
+
 🛍️ ShopSphere
+
 </div>
 
 
 
 <div class="search-bar">
 
+
 <input 
+
 type="text"
+
 id="searchInput"
+
 placeholder="Search products..."
+
 onkeyup="searchProducts()">
+
 
 </div>
 
@@ -43,19 +63,47 @@ onkeyup="searchProducts()">
 
 <div class="menu">
 
-<a href="index.html">Home</a>
 
-<a href="#products">Products</a>
+<a href="index.html">
+Home
+</a>
 
-<a href="#categories">Categories</a>
 
-<a href="register.html">Register</a>
+<a href="#offers">
+Offers
+</a>
 
-<a href="login.html">Login</a>
+
+<a href="#best-sellers">Best Sellers</a>
+
+
+<a href="#contact">Contact</a>
+
+
+<a href="#products">
+Products
+</a>
+
+
+<a href="#categories">
+Categories
+</a>
+
+
+<a href="register.html">
+Register
+</a>
+
+
+<a href="login.html">
+Login
+</a>
+
 
 <a href="cart.html">
 🛒 Cart
 </a>
+
 
 
 </div>
@@ -67,7 +115,7 @@ onkeyup="searchProducts()">
 
 
 
-<!-- ================= HERO ================= -->
+<!-- ================= HERO SECTION ================= -->
 
 
 <section class="hero">
@@ -76,24 +124,54 @@ onkeyup="searchProducts()">
 <div class="hero-content">
 
 
+<h4>
+WELCOME TO SHOPSPHERE
+</h4>
+
+
 <h1>
-🔥 Mega Sale is Live!
+India's Smart Shopping Destination
 </h1>
 
 
+
 <h2>
-Up To 50% OFF
+Up to 50% OFF on Premium Electronics
 </h2>
 
 
+
 <p>
-Latest Electronics, Smartphones, Laptops & Accessories
+
+Discover amazing deals on laptops, smartphones,
+gaming accessories and much more.
+
 </p>
 
 
 <button onclick="location.href='#products'">
+
 Shop Now
+
 </button>
+
+<button
+class="secondary-btn"
+onclick="location.href='#products'">
+
+Explore Deals
+
+</button>
+
+<div class="countdown">
+
+<h3>🔥 Flash Sale Ends In:</h3>
+
+<p id="timer">
+00:00:00
+</p>
+
+</div>
 
 
 </div>
@@ -107,14 +185,122 @@ Shop Now
 
 
 
+<!-- ================= STATISTICS ================= -->
+
+
+<section class="stats">
+
+
+<div class="stat-box">
+
+<h2>
+10K+
+</h2>
+
+<p>
+Happy Customers
+</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>
+500+
+</h2>
+
+<p>
+Products
+</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>
+24/7
+</h2>
+
+<p>
+Customer Support
+</p>
+
+</div>
+
+
+
+<div class="stat-box">
+
+<h2>
+99%
+</h2>
+
+<p>
+Positive Reviews
+</p>
+
+</div>
+
+
+</section>
+
+
+
 <!-- ================= CATEGORIES ================= -->
 
+
+<section class="categories" id="categories">
+    </section>
+
+<!-- ================= OFFERS ================= -->
+
+<section class="offers" id="offers">
+
+<h2>🎁 Today's Special Offers</h2>
+
+<div class="offers-container">
+
+<div class="offer-card">
+
+🔥 Flat 50% OFF
+
+<span>On Smartphones</span>
+
+</div>
+
+<div class="offer-card">
+
+💻 Save ₹5000
+
+<span>On Laptops</span>
+
+</div>
+
+<div class="offer-card">
+
+🎧 Buy 1 Get 1
+
+<span>On Accessories</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
 
 <section class="categories" id="categories">
 
 
 <h2>
+
 Shop By Category
+
 </h2>
 
 
@@ -123,53 +309,33 @@ Shop By Category
 
 
 
-<div class="category-card">
-
+<div class="category-card" onclick="filterProducts('Electronics'); location.href='#products';">
 💻
-
-<h3>
-Electronics
-</h3>
-
+<h3>Electronics</h3>
 </div>
 
 
 
-<div class="category-card">
 
+<div class="category-card" onclick="filterProducts('Mobiles'); location.href='#products';">
 📱
-
-<h3>
-Mobiles
-</h3>
-
+<h3>Mobiles</h3>
 </div>
 
 
 
-
-<div class="category-card">
-
-⌚
-
-<h3>
-Accessories
-</h3>
-
-</div>
-
-
-
-
-<div class="category-card">
-
+<div class="category-card" onclick="filterProducts('Audio'); location.href='#products';">
 🎧
-
-<h3>
-Audio
-</h3>
-
+<h3>Audio</h3>
 </div>
+
+
+
+<div class="category-card" onclick="filterProducts('Audio'); location.href='#products';">
+🎧
+<h3>Audio</h3>
+</div>
+
 
 
 
@@ -184,8 +350,7 @@ Audio
 
 
 
-
-<!-- ================= FILTER ================= -->
+<!-- ================= PRODUCT FILTER ================= -->
 
 
 <section class="category-filter">
@@ -196,47 +361,59 @@ Explore Products
 </h2>
 
 
+
 <div class="filter-buttons">
 
 
+
 <button onclick="filterProducts('All')">
+
 All
+
 </button>
+
 
 
 <button onclick="filterProducts('Electronics')">
+
 Electronics
+
 </button>
+
+
 
 
 <button onclick="filterProducts('Mobiles')">
+
 Mobiles
+
 </button>
+
+
 
 
 <button onclick="filterProducts('Audio')">
+
 Audio
+
 </button>
+
+
 
 
 <button onclick="filterProducts('Accessories')">
+
 Accessories
+
 </button>
+
 
 
 </div>
 
 
 </section>
-
-
-
-
-
-
-
-
-<!-- ================= FEATURED ================= -->
+<!-- ================= FEATURED PRODUCTS ================= -->
 
 
 <section class="section-title">
@@ -252,9 +429,7 @@ Premium products at the best prices
 </p>
 
 
-
-<button class="cart-btn"
-onclick="window.location.href='cart.html'">
+<button class="cart-btn" onclick="window.location.href='cart.html'">
 
 🛒 View Cart
 
@@ -267,7 +442,102 @@ onclick="window.location.href='cart.html'">
 
 
 
+<!-- ================= WHY SHOP WITH US ================= -->
 
+
+<section class="features">
+
+
+<h2>
+Why Shop With Us?
+</h2>
+
+
+<div class="features-container">
+
+
+<div class="feature-card">
+
+🚚
+
+<h3>
+Free Shipping
+</h3>
+
+<p>
+On all eligible orders.
+</p>
+
+</div>
+
+
+
+<div class="feature-card">
+
+🔒
+
+<h3>
+Secure Payments
+</h3>
+
+<p>
+100% Safe Checkout.
+</p>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+💯
+
+<h3>
+Quality Products
+</h3>
+
+<p>
+Premium Brands Only.
+</p>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+📞
+
+<h3>
+24/7 Support
+</h3>
+
+<p>
+Always Here To Help.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ================= BEST SELLERS ================= -->
+
+<section class="best-section" id="best-sellers">
+
+<h2>🔥 Best Sellers</h2>
+
+<p>Our most loved products by customers</p>
+
+</section>
 
 
 
@@ -275,6 +545,7 @@ onclick="window.location.href='cart.html'">
 
 
 <div class="container" id="products">
+
 
 
 
@@ -296,40 +567,62 @@ onclick="window.location.href='cart.html'">
 </button>
 
 
-
 <img src="images/Wireless Headphones.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=1">
+
 Wireless Headphones
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹2999
+
 </p>
+
 
 
 <p>
+
 ₹1999
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 3 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Wireless Headphones',1999)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
 
 
 
@@ -344,48 +637,77 @@ Wireless Headphones
 
 
 <span class="discount">
+
 25% OFF
+
 </span>
 
 
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Smart Watch.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=2">
+
 Smart Watch
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹3499
+
 </p>
+
 
 
 <p>
+
 ₹2499
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 5 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Smart Watch',2499)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
 
 
 
@@ -400,48 +722,85 @@ Smart Watch
 
 
 <span class="discount">
+
 40% OFF
+
 </span>
 
 
+
+<span class="best-seller">
+
+Best Seller
+
+</span>
+
+
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Gaming Mouse.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=3">
+
 Gaming Mouse
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹1599
+
 </p>
+
 
 
 <p>
+
 ₹999
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 7 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Gaming Mouse',999)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
 
 
 
@@ -456,48 +815,77 @@ Gaming Mouse
 
 
 <span class="discount">
+
 20% OFF
+
 </span>
 
 
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Bluetooth Speaker.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=4">
+
 Bluetooth Speaker
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹2299
+
 </p>
+
 
 
 <p>
+
 ₹1799
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 5 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Bluetooth Speaker',1799)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
 
 
 
@@ -512,54 +900,77 @@ Bluetooth Speaker
 
 
 <span class="discount">
+
 35% OFF
+
 </span>
 
 
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Keyboard.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=5">
+
 Mechanical Keyboard
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹4999
+
 </p>
+
 
 
 <p>
+
 ₹2999
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 10 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Mechanical Keyboard',2999)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
-
-
-
-
-
-
 <!-- PRODUCT 6 -->
 
 
@@ -567,48 +978,85 @@ Mechanical Keyboard
 
 
 <span class="discount">
+
 15% OFF
+
 </span>
 
 
+
+<span class="best-seller">
+
+Best Seller
+
+</span>
+
+
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Laptop.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=6">
+
 Laptop
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹64999
+
 </p>
+
 
 
 <p>
+
 ₹54999
+
 </p>
 
 
+
+<p class="stock">
+
+✅ In Stock
+
+</p>
+
+
+
 <button onclick="addToCart('Laptop',54999)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
-
 
 
 
@@ -623,47 +1071,85 @@ Laptop
 
 
 <span class="discount">
+
 25% OFF
+
 </span>
 
 
+
+<span class="best-seller">
+
+Best Seller
+
+</span>
+
+
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Smartphone.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=7">
+
 Smartphone
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹24999
+
 </p>
+
 
 
 <p>
+
 ₹18999
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Limited Stock Available
+
+</p>
+
+
+
 <button onclick="addToCart('Smartphone',18999)">
+
 🛒 Add To Cart
+
 </button>
 
 
 </div>
-
 
 
 
@@ -678,42 +1164,73 @@ Smartphone
 
 
 <span class="discount">
+
 20% OFF
+
 </span>
 
 
+
 <button class="wishlist">
+
 ❤️
+
 </button>
+
 
 
 <img src="images/Camera.jpg">
 
 
+
 <h2>
+
 <a href="product.html?id=8">
+
 Camera
+
 </a>
+
 </h2>
 
 
+
 <div class="rating">
+
 ⭐⭐⭐⭐
+
 </div>
 
 
+
 <p class="old-price">
+
 ₹39999
+
 </p>
+
 
 
 <p>
+
 ₹32999
+
 </p>
 
 
+
+<p class="stock">
+
+🔥 Only 3 Left
+
+</p>
+
+
+
 <button onclick="addToCart('Camera',32999)">
+
 🛒 Add To Cart
+
 </button>
 
 
@@ -721,11 +1238,107 @@ Camera
 
 
 
+</div>
+
+
+
+
+
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+
+<section class="testimonials">
+
+
+<h2>
+
+What Our Customers Say
+
+</h2>
+
+
+
+<div class="testimonial-container">
+
+
+<div class="testimonial">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"Excellent shopping experience! Fast delivery and quality products."
+
+</p>
+
+
+<h4>
+
+- Rahul Sharma
+
+</h4>
 
 
 </div>
 
 
+
+
+<div class="testimonial">
+
+
+⭐⭐⭐⭐⭐
+
+
+<p>
+
+"ShopSphere has become my favorite online shopping destination."
+
+</p>
+
+
+<h4>
+
+- Priya Verma
+
+</h4>
+
+
+</div>
+
+
+
+
+<div class="testimonial">
+
+
+⭐⭐⭐⭐⭐
+
+
+<p>
+
+"Secure payment and amazing discounts. Highly recommended!"
+
+</p>
+
+
+<h4>
+
+- Arjun Kumar
+
+</h4>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
 
 
 
@@ -736,27 +1349,176 @@ Camera
 <!-- ================= FOOTER ================= -->
 
 
-<footer class="footer">
+<footer class="footer" id="contact">
+
+
+<h2>
+
+🛍️ ShopSphere
+
+</h2>
+
+
+
+<p>
+
+Your One-Stop Online Shopping Destination
+
+</p>
+
+
+
+<hr>
+
+
+
+<div class="footer-links">
+
+
+<div>
 
 
 <h3>
-🛍️ ShopSphere
+
+Quick Links
+
 </h3>
 
 
 <p>
-Your One-Stop Online Shopping Destination
+
+Home
+
 </p>
 
 
 <p>
-© 2026 ShopSphere
+
+Products
+
 </p>
 
 
 <p>
+
+Categories
+
+</p>
+
+
+<p>
+
+Offers
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<h3>
+
+Customer Care
+
+</h3>
+
+
+<p>
+
+Help Center
+
+</p>
+
+
+<p>
+
+Track Order
+
+</p>
+
+
+<p>
+
+Returns
+
+</p>
+
+
+<p>
+
+Privacy Policy
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<h3>
+
+Contact
+
+</h3>
+
+
+<p>
+
+Email: support@shopsphere.com
+
+</p>
+
+
+<p>
+
+Phone: +91 9876543210
+
+</p>
+
+
+<p>
+
+India
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<p>
+
+© 2026 ShopSphere. All Rights Reserved.
+
+</p>
+
+
+<p>
+
 Developed by Shaik Shaheena
+
 </p>
+
 
 
 </footer>
