@@ -1,39 +1,31 @@
 # 🛍️ ShopSphere - Online Shopping Website
 
-## 📌 Project Overview
+## Project Overview
 
 ShopSphere is a full-stack e-commerce website developed as part of the ShadowFox Internship Project.
 
-The application allows users to browse products, search products, filter products by category, add items to cart, and place orders.
+It allows users to browse products, search products, filter categories, add products to cart, and manage shopping activities.
 
 ---
 
-## ✨ Features
+## Features
 
-### 👤 User Features
 - User Registration
 - User Login
 - Product Browsing
 - Search Products
-- Category Based Filtering
-- Product Details View
-- Add Products to Cart
-- Remove Products from Cart
+- Category Filtering
+- Product Details Page
+- Add To Cart
+- Remove From Cart
 - Checkout System
+- Responsive Design
+- Discount Offers
+- Product Ratings
 
 ---
 
-## 🛒 E-Commerce Features
-
-- Product listing page
-- Featured products section
-- Shopping cart management
-- Order placement
-- Responsive user interface
-
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - HTML5
@@ -44,11 +36,14 @@ The application allows users to browse products, search products, filter product
 - Node.js
 - Express.js
 
+### Database
+- MongoDB
+
 ### Tools
-- Visual Studio Code
+- VS Code
 - Git & GitHub
 - Live Server
 
 ---
 
-## 📂 Project Structure
+## Project Structure
