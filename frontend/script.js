@@ -31,7 +31,7 @@ function addToCart(name, price){
 // ================= GET PRODUCTS FROM BACKEND =================
 
 
-fetch("http://localhost:3000/products")
+fetch("https://shopsphere-backend-3d21.onrender.com/products")
 
 
 .then(response => response.json())
