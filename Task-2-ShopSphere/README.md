@@ -52,3 +52,6 @@ The application allows users to browse products, search products, filter product
 ---
 
 ## 📂 Project Structure
+## 🌐 Live Demo
+
+https://your-netlify-link.netlify.app
