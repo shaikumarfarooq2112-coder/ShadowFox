@@ -51,3 +51,8 @@ It allows users to browse products, search products, filter categories, add prod
 ## 🌐 Live Demo
 
 https://your-netlify-site.netlify.app
+
+## ⚙️ Backend API
+
+Backend:
+https://shopsphere-backend-3d21.onrender.com
