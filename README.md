@@ -47,3 +47,7 @@ It allows users to browse products, search products, filter categories, add prod
 ---
 
 ## Project Structure
+
+## 🌐 Live Demo
+
+https://your-netlify-site.netlify.app
