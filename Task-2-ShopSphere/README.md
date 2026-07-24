@@ -52,6 +52,16 @@ The application allows users to browse products, search products, filter product
 ---
 
 ## 📂 Project Structure
+
 ## 🌐 Live Demo
 
-https://your-netlify-link.netlify.app
+Frontend:
+https://shaheena-shopsphere.netlify.app/
+
+## ⚙️ Backend API
+
+Backend:
+https://shopsphere-backend-3d21.onrender.com
+
+API Example:
+https://shopsphere-backend-3d21.onrender.com/products
